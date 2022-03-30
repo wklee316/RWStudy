@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .total{
+            text-align: center;
+            width: 1500px;
+        }
+        .box{
+            width: 300px;
+            height: 700px;
+            margin-left: 100px;
+            margin-right: 20px;
+            border: 1px black solid;
+            float: left;
+        }
+
+        .block{
+            width: 15px;
+            height: 15px;
+            float: left;
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+
+        #red{
+            background-color: red;
+        }
+        #yellow{
+            background-color: yellow;
+        }
+        #blue{
+            background-color: blue;
+        }
+        #green{
+            background-color: green;
+        }
+        #purple{
+            background-color: purple;
+        }
+        #black{
+            background-color: black;
+        }
+
+    </style>
+</head>
+<body>
+    하노이의 탑 <br> <br>
+    <button>초기화</button> <br> <br>
+    <div class="total">
+        <div class="box" id="box1">
+            <br>
+            <div class="block" id="red" style="margin-left: 17px;"></div>
+            <div class="block" id="red"></div>
+            <div class="block" id="red"></div>
+            <div class="block" id="red"></div>
+            <div class="block" id="red"></div>
+            <div class="block" id="red"></div>
+            <div class="block" id="red"></div>
+            <div class="block" id="red"></div>
+            <div class="block" id="red"></div>
+            <div class="block" id="red"></div>
+            <div class="block" id="red"></div> <br>
+            <div class="block" id="yellow" style="margin-left: 41px;"></div>
+            <div class="block" id="yellow"></div>
+            <div class="block" id="yellow"></div>
+            <div class="block" id="yellow"></div>
+            <div class="block" id="yellow"></div>
+            <div class="block" id="yellow"></div>
+            <div class="block" id="yellow"></div>
+            <div class="block" id="yellow"></div>
+            <div class="block" id="yellow"></div> <br>
+            <div class="block" id="blue" style="margin-left: 65px;"></div>
+            <div class="block" id="blue"></div>
+            <div class="block" id="blue"></div>
+            <div class="block" id="blue"></div>
+            <div class="block" id="blue"></div>
+            <div class="block" id="blue"></div>
+            <div class="block" id="blue"></div> <br>
+            <div class="block" id="green" style="margin-left: 89px;"></div>
+            <div class="block" id="green"></div>
+            <div class="block" id="green"></div>
+            <div class="block" id="green"></div>
+            <div class="block" id="green"></div> <br>
+            <div class="block" id="purple" style="margin-left: 113px;"></div>
+            <div class="block" id="purple"></div>
+            <div class="block" id="purple"></div> <br>
+            <div class="block" id="black" style="margin-left: 137px;"></div>
+        </div>
+        <div class="box" id="box2"></div>
+        <div class="box" id="box3"></div>
+
+
+    </div>
+</body>
+</html>
