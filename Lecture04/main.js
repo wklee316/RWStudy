@@ -1,15 +1,42 @@
-var line1 = document.getElementById("first");
-var line2 = document.getElementById("second");
-var line3 = document.getElementById("third");
-var line4 = document.getElementById("fourth");
-var line5 = document.getElementById("fifth");
-var line6 = document.getElementById("sixth");
+var box1Lines = document.getElementsByClassName("firstBox");
+var box2Lines = document.getElementsByClassName("secondBox");
+var box1 = document.getElementById("box1");
+
+var blockString = ["🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥", "🟨 🟨 🟨 🟨 🟨 🟨 🟨 🟨 🟨",
+"🟩 🟩 🟩 🟩 🟩 🟩 🟩", "🟦 🟦 🟦 🟦 🟦", "🟪 🟪 🟪", "⬛"];
+
+var box1Stack = [];
+var box2Stack = [];
+var box3Stack = [];
 
 function init(){
-    line1.innerHTML = "🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥";
-    line2.innerHTML = "🟨 🟨 🟨 🟨 🟨 🟨 🟨 🟨 🟨";
-    line3.innerHTML = "🟩 🟩 🟩 🟩 🟩 🟩 🟩";
-    line4.innerHTML = "🟦 🟦 🟦 🟦 🟦";
-    line5.innerHTML = "🟪 🟪 🟪";
-    line6.innerHTML = "⬛"
+    
+    box1Stack = [0,1,2,3,4,5];
+
+    for(var i =0; i<6; i++){
+        box1Lines[i].innerHTML = blockString[i];
+    }
 }
+
+function box1Click(){
+    box2Stack.push(box1Stack.pop());
+    aply();
+}
+
+function aply(){
+    clear();
+    for(var i = 0; i<6; i++){
+        if(box1Stack[i] != null)
+            box1Lines[i].innerHTML = blockString[box1Stack[i]];
+        if(box2Stack[i] != null)
+            box2Lines[i].innerHTML = blockString[box2Stack[i]];
+    }
+}
+
+function clear(){
+    for(var i =0; i<6; i++){
+        box1Lines[i].innerHTML = "";
+        box2Lines[i].innerHTML = "";
+    }
+}
+
