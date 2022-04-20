@@ -27,14 +27,19 @@ function box1Click(){
 }
 
 function box2Click(){
-    box3Stack.push(box2Stack.pop());
-    aply();
+    if(box2Stack[box2Stack.length-1] != null){
+        if(box2Stack[box2Stack.length-1] > box3Stack[box3Stack.length-1] || box3Stack[box3Stack.length-1] == null)
+            box3Stack.push(box2Stack.pop());
+        aply();
+    }
 }
 
 function box3Click(){
-    
-    box1Stack.push(box3Stack.pop());
-    aply();
+    if(box3Stack[box3Stack.length-1] != null){
+        if(box3Stack[box3Stack.length-1] > box1Stack[box1Stack.length-1] || box1Stack[box1Stack.length-1] == null)
+            box1Stack.push(box3Stack.pop());
+        aply();
+    }
 }
 
 
